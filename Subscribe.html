@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../HTML Final ex/images/unipiLogo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../HTML Final ex/pagestyling.css">
+    <title>Main page</title>
+    <script src="colors.js"></script>
+    <script src="checkform.js"></script>
+     
+</head>
+<body>
+    <div class="menu-strip">
+        <img class="bannerImg" src="../HTML Final ex/images/banner3.jpg" alt="Banner image with eurovision logo">
+        <div class="centered">
+            <ul>
+            <a href="../HTML Final ex/Main_page.html">Αρχική</a>
+            <a href="../HTML Final ex/History.html">Ιστορία του διαγωνισμού</a>
+            <a href="../HTML Final ex/Greece_History.html">Ελληνική συμμετοχή</a>
+            <a href="../HTML Final ex/Subscribe.html">Εγγραφή&ψηφοφορία</a>
+            <a href="../HTML Final ex/Contact.html">Επικοινωνία</a>
+            </ul>
+        </div>
+        <img class="top-left" src="../HTML Final ex/images/unipiLogo.png" alt="Unipi logo" width="6%" height="30%">
+    </div>
+
+    <h1 style="margin-top: 15px; padding: auto;">Φόρμα Εγγραφής</h1>
+    <h2 style="text-align: center;">Παρακάτω στη σελίδα θα βρείτε τη φόρμα πληρωμής την οποία θα πρέπει να συμπληρώσετε ώστε να ολοκληρωθεί η εγγραφή σας</h2>
+    <div class="flexbox">
+        <div id="infor_form">
+            <table class="Table_Greeks" >
+                <caption><h3>Οδηγίες συμπλήρωσης:</h3></caption>
+                    <tr>
+                        <td>
+                        <li > 
+                            <em><b>Όνομα:</b></em> στο πεδίο του ονόματος θα πρέπει να συμπληρώσετε το όνομα σας αποκλειστικά με ελληνικούς χαρακτήρες
+                        </li>
+                    <li> 
+                        <em><b>Διεύθυνση:</b></em> η διεύθυνση πρέπει να είναι της μορφής Οδός [κενό] Αριθμός. 
+                    </li>
+                    <li > 
+                        <em><b>Ταχυδρομικός κώδικας:</b></em> Ο ταχυδρομικός κώδικας πρέπει να είναι υποχρεωτικά 5 ψηφία. 
+                    </li>
+                    <li> 
+                        <em><b>Αριθμός τηλεφώνου:</b></em> ο αριθμός σταθερού τηλεφώνου πρέπει να είναι της μορφής +30210 ώστε να είναι αποδεκτός. 
+                    </li>
+                    <li > 
+                        <em><b>Email:</b></em> έγκυρη θεωρείται η διεύθυνση email η οποία είναι της μορφής example@unipi.gr. 
+                    </li>
+                    <li > 
+                        <em><b>Χώρα:</b></em> η Ελλάδα είναι προεπιλεγμένη ωστόσο ο χρήστης μπορεί να κάνει επιλογή της Χώρας όπου ανήκει η κάρτα του. 
+                    </li>
+                    <li> 
+                        <em><b>Κωδικός:</b></em> Συνίσταται η προσθήκη ενός ισχυρού κωδικού όπου να περιλαμβάνει σύμβολα όπως (!,@,#,%). 
+                    </li>
+                </td>
+                </tr>
+            </table>
+        </div>
+    
+    <div id="Subscribe">
+
+        <form id="form" method="post" action="contact.php" name="mysignin">
+    
+            <legend><b>Subscription Form</b></legend>
+
+            <p>Choose the background color of the form:
+                <select id="formColor">
+                    <option>Choose</option>
+                    <option value="transparent">Transparent</option>
+                    <option value="lightblue">Lightblue</option>
+                    <option value="white">White</option>
+                    <option value="#8E8B8B">Gray</option>
+                    <option value="lightpink">Lightpink</option>
+                    <option value="#88F660">Green</option>
+                    <option value="#F53F51">Red</option>
+                </select>
+            </p>
+        
+            <p><label for="firstname">Όνομα: &nbsp;<input type="text" id="firstname" name="firstname" size="40" maxlength="25" placeholder="μόνο ελληνικούς χαρακτήρες"></label></p>
+            
+            <p><label for="address1">Διεύθυνση: &nbsp; <input type="text" id="address1" name="address1" size="40" placeholder="μόνο ελληνικούς χαρακτήρες"></label></p>
+        
+            <p><label for="zip">Ταχ. Κωδικός: &nbsp;<input type="text" id="zip" name="zip" maxlength="5" pattern="[0-9]{5}" required></label></p>
+        
+            <p><label for="phonenumber">Αριθμός Τηλεφώνου: &nbsp;<input type="text" id="phonenumber" name="phonenumber" value="+30210" pattern="+[0-9]{12}" maxlength="13" ></label></p>
+                
+            <p><label for="email">email: &nbsp;<input type="email" id="email" name="email" size="50"></label></p>
+                
+            <p><label for="country">Χώρα: &nbsp;<select id="country" name="country" >
+                <optgroup label="Μεσογειακές Χώρες">
+                    <option selected>Ελλάδα</option>
+                    <option>Ιταλία</option>
+                    <option>Ισπανία</option>
+                    <option>Γαλλία</option>
+                    <option>Κύπρος</option>
+                </optgroup>
+                <optgroup label="Άλλες">
+                    <option>Τουρκία</option>
+                    <option>Γερμανία</option>
+                    <option>Δανία</option>
+                    <option>Ολλανδία</option>
+                    <option>Αμερική</option>
+                </optgroup>
+                </select>
+            </label></p>
+        
+            <p><label for="password">Κωδικός:&nbsp;</label><input type="password" id="password" name="password" size="45"></p>
+            <br>
+
+            <p>
+            <input type="button" id="checkform" value="Έλεγχος φόρμας" working>
+            <input type="submit" id="mysubmt" value="Αποθήκευση">
+            <input type="reset"  id="breset"  value="Καθαρισμός στοιχείων">
+            <input type="button" id="printB" value="Εκτύπωση σελίδας" onClick="window.print()">
+            </p>
+    
+        </form>
+        <p id="errors" style="color:rgb(163, 13, 13);"></p>
+        </div>
+    </div>
+    <br>
+
+    <p>Τώρα μέσα απο την ιστοσελίδα μας σας δίνεται η δυνατότητα να ψηφίσετε το αγαπημένο σας τραγούδι! Ακόμη θα έχετε την ευκαιρία να δείτε πρώτοι
+        τι ψήφισαν τα υπόλοιπα μέλη της ιστοσελίδας μας και άλλα πολλά!</p>
+    <p>Πατήστε το παρακάτω σύνδεσμο <a href="../HTML Final ex/vote.html"><b><em>(-> Ψήφισε τώρα)</em></b></a> ώστε να μεταβείτε στη σελίδα ψηφοφορίας.</p>
+    <hr class="linebreak">
+</body>
+</html>

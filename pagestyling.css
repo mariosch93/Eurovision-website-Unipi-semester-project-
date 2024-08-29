@@ -1,0 +1,238 @@
+body {
+    background-color: rgb(200, 194, 230);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(112, 121, 199));
+    margin: 0;
+}
+
+page[size="A4"] {
+    background: white;
+    width: 21cm;
+    height: 29.7cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+@media print {
+    body, page[size="A4"] {
+      margin: 0;
+      box-shadow: 0;
+    }
+  }
+
+h1 {text-align: center;
+    margin: 15px;
+}
+h2,h3,h4 {
+    text-align: left;
+    margin: 15px;
+}
+
+
+a:link{color: blue;}
+a:visited{color: rgb(173, 106, 18);}
+a:hover{color: rgb(156, 158, 47);}
+
+p, li {text-align: left;
+   font-size: 14pt;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 10px;
+   margin-left: 20px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   word-spacing: 2px;
+   line-height: 1.50;
+}
+
+footer {
+    text-align: left; 
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    word-spacing: 2px;
+    line-height: 1.25
+}
+
+.menu-strip {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 0%;
+    margin: 0%;
+}
+
+.bannerImg {
+    width: 100%;
+    height:350px;
+}
+
+.top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered > ul > a {color: antiquewhite; font-family:Arial, Helvetica, sans-serif; font-size:larger; margin-right: 20px;}
+
+.linebreak{border: solid rgb(116, 81, 109); border-radius: 50%; width: 60%; height: 1px;}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-self: auto;
+    width: 100%;
+}
+#info-table {
+    margin: 10px;
+    margin-bottom: 0px;
+    border: 2px solid black;
+    line-height: 1.25;
+}
+
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: red;
+    font-family: sans-serif;
+    font-size: 14pt;}
+@keyframes blinker {
+    50% {opacity: 0;}}
+
+.Table_Greeks{
+    font-family: arial, sans-serif;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 20px;   
+}
+.Table_Greeks td , th, tr {
+    border: 1px solid black;
+    border-radius: 10px;   
+    text-align: center;
+    padding: 8px;
+}
+
+#form {
+    margin: 20px;
+    background-color: transparent;
+    width:max-content;
+    border: 2px solid black;
+    border-style:outset;
+    border-inline-start: 4px solid black;
+}
+#form > legend {
+    text-align: center;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 3s;    
+}
+@keyframes fade{
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.container{
+    width: 95%;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 3px;
+}
+
+
+
+.item{
+    width: 160px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-grow:1;
+}
+
+select{
+    width: 220px;
+    height: 35px;
+    margin: 10px;
+    font-size: 12pt;
+}
+select option:first-child {
+    color: rgb(180, 0, 0);
+}
+
+input {
+    height: 35px;
+    font-size: 12pt;
+    text-align: center;
+}
+
+
+.container-bio
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;  
+}
+
+.box1{width: 65%;}
+.box2{width: 35%;}
+
+
+.skillbox {
+  width: 100%;
+  float: right;
+  margin: 10px;
+}
+.skills {
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 10px;
+  color: white;
+
+}
+.html   {width: 90%; background-color: #ad2f19;}
+.css    {width: 85%; background-color: #b97a1b;}
+.js     {width: 70%; background-color: #bb9221;}
+.php    {width: 50%; background-color: #85c71b;}
+.python {width: 75%; background-color: #1da024;}
+.c      {width: 65%; background-color: #1aa7b1;}
+.csharp {width: 70%; background-color: #1b3897;}
+.java   {width: 50%; background-color: #8619a1;}
+.SQL    {width: 70%; background-color: #b82551;}
+.greek  {width: 95%; background-color: #3d7ccf;}
+.english{width: 90%; background-color: #32228d;}
+
+
+
+#bio-details > p{
+    font-size: 14pt;
+    margin: 10px;
+}
+#bio-details a:link {color: blue;}
+#bio-details a:visited{color: rgb(23, 37, 161);}
+#bio-details a:hover{color: rgb(158, 60, 47);} 
